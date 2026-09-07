@@ -299,28 +299,6 @@ Possible deployment platforms:
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots of the actual application here.
-
-```markdown
-## 📸 Screenshots
-
-### Video Meeting
-
-![Video Meeting](./screenshots/video-meeting.png)
-
-### Real-Time Chat
-
-![Real-Time Chat](./screenshots/chat.png)
-
-### Home Page
-
-![Home Page](./screenshots/home.png)
-```
-
----
-
 ## 🧠 What I Learned
 
 Building VisionMeet provided hands-on experience with:
