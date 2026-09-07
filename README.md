@@ -1,234 +1,362 @@
-🎥 VisionMeet — Real-Time Video Calling & Chat Platform
+# 🎥 VisionMeet
 
-A real-time video conferencing and chat application built with WebRTC, Node.js, Express.js, and Stream API, designed for smooth peer-to-peer communication and collaborative online meetings.
+### Real-Time Video Calling & Chat Platform
 
+> VisionMeet is a real-time video conferencing and chat platform built with **WebRTC, Node.js, Express.js, and Stream API**, enabling users to communicate through video, audio, and messaging with a smooth and responsive experience.
 
+---
 
+## 🚀 Features
 
+### 🎥 Real-Time Video Calling
 
+* Start and join video meetings in real time
+* Peer-to-peer video communication using **WebRTC**
+* Real-time audio and video streaming
+* Support for multiple participants
+* Camera and microphone controls
+* Join and leave meetings seamlessly
 
+### 💬 Real-Time Chat
 
+* Instant messaging during video meetings
+* Real-time communication using **Stream API**
+* Send and receive messages without refreshing the page
+* Chat alongside an active video call
 
-📌 Overview
+### 👥 Multi-User Meetings
 
-VisionMeet is a real-time video calling and messaging platform that enables users to communicate through video, audio, and chat.
+VisionMeet supports multi-user meeting sessions, allowing participants to communicate through video, audio, and chat within the same meeting environment.
 
-The application uses WebRTC for peer-to-peer media communication and Stream API for real-time chat functionality.
+The current implementation is designed to support **up to 5 participants per session**.
 
-The project focuses on providing a smooth, low-latency communication experience with a scalable backend architecture.
+### ⚡ Low-Latency Communication
 
-🎯 Key Highlights
-📹 Real-time video conferencing
-🎙️ Live audio communication
-💬 Real-time chat and messaging
-👥 Multi-user meeting support
-🔗 Peer-to-peer communication using WebRTC
-⚡ Low-latency communication
-📱 Responsive user interface
-☁️ Cloud-ready architecture
-🔄 Real-time event handling
-✨ Features
-🎥 Video Conferencing
-Start and join video meetings in real time
-Peer-to-peer video communication using WebRTC
-Multiple participant support
-Real-time audio and video streaming
-Low-latency communication
-💬 Real-Time Chat
-Send and receive messages instantly
-Real-time messaging using Stream API
-Chat during video meetings
-Smooth messaging experience
-👥 Multi-User Meetings
+The application is designed for real-time communication with a focus on:
 
-VisionMeet supports meeting sessions with multiple participants, allowing users to communicate in a shared virtual meeting environment.
+* Fast peer-to-peer media transmission
+* Efficient real-time events
+* Responsive user interactions
+* Reliable communication between participants
 
-The current architecture is designed to support up to 5 participants per session.
+---
 
-🎙️ Audio & Video Controls
+## 🧠 How It Works
 
-Users can manage their communication during meetings:
+VisionMeet combines **WebRTC** and backend services to establish real-time communication between participants.
 
-Enable or disable microphone
-Enable or disable camera
-Join meetings
-Leave meetings
-Manage audio and video communication
-🛠️ Tech Stack
-Frontend
-HTML5
-CSS3
-JavaScript
-WebRTC
-Stream API
-Backend
-Node.js
-Express.js
-Real-Time Communication
-WebRTC
-Stream API
-Tools
-Git
-GitHub
-npm
-Postman
+```text
+                    VisionMeet
+                        │
+             ┌──────────┴──────────┐
+             │                     │
+             ▼                     ▼
+          User A                User B
+       Camera + Audio        Camera + Audio
+             │                     │
+             │       WebRTC        │
+             └──────────┬──────────┘
+                        │
+                        ▼
+                 Peer-to-Peer
+                 Communication
 
-Communication Flow
-User opens VisionMeet.
-User joins or creates a meeting session.
-Camera and microphone permissions are requested.
-WebRTC establishes peer-to-peer media communication.
-Required signaling information is exchanged.
-Participants receive real-time audio and video.
-Stream API handles real-time chat.
-Users can leave the meeting when finished.
-🚀 Getting Started
-Prerequisites
+                        │
+                        ▼
+                   Stream API
+                        │
+                        ▼
+                 Real-Time Chat
+```
 
-Make sure you have installed:
+### Communication Flow
 
-Node.js
-npm
-Git
-Modern web browser
-Camera and microphone
+1. User opens the VisionMeet application.
+2. User joins or creates a meeting.
+3. The browser requests camera and microphone permissions.
+4. WebRTC establishes peer-to-peer media communication.
+5. Required connection/signaling information is exchanged.
+6. Participants receive real-time audio and video.
+7. Stream API provides real-time chat functionality.
+8. Users can leave the meeting when finished.
 
-Check your Node.js and npm versions:
+---
 
-node --version
-npm --version
-📥 Installation
-1. Clone the Repository
-git clone https://github.com/MdWahidansari/VisionMeet-video-calls.git
-2. Navigate to the Project
-cd VisionMeet-video-calls
-3. Install Backend Dependencies
-cd backend
-npm install
-4. Install Frontend Dependencies
+## 🛠️ Tech Stack
 
-Open another terminal:
+### Frontend
 
-cd frontend
-npm install
-🔐 Environment Variables
+* HTML5
+* CSS3
+* JavaScript
+* WebRTC
+* Stream API
 
-Create a .env file inside the backend directory.
+### Backend
 
-Example:
+* Node.js
+* Express.js
 
+### APIs & Communication
+
+* WebRTC
+* Stream API
+* REST APIs
+
+### Development Tools
+
+* Git
+* GitHub
+* npm
+* Postman
+
+---
+
+## 🏗️ Project Structure
+
+```text
+VisionMeet-video-calls/
+│
+├── backend/
+│
+├── frontend/
+│
+├── package.json
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside the `backend` directory.
+
+```env
 PORT=5000
 STREAM_API_KEY=your_stream_api_key
 STREAM_API_SECRET=your_stream_api_secret
+```
 
-⚠️ Never commit .env files or API secrets to GitHub.
+> ⚠️ **Important:** Never commit `.env` files, API keys, or secret credentials to GitHub.
 
-▶️ Running the Application
-Start Backend
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+* [Node.js](https://nodejs.org/)
+* npm
+* Git
+* A modern web browser
+* Camera and microphone
+
+Check your Node.js and npm versions:
+
+```bash
+node --version
+npm --version
+```
+
+---
+
+## 📥 Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/MdWahidansari/VisionMeet-video-calls.git
+```
+
+### 2. Open the Project
+
+```bash
+cd VisionMeet-video-calls
+```
+
+### 3. Install Backend Dependencies
+
+```bash
+cd backend
+npm install
+```
+
+### 4. Install Frontend Dependencies
+
+Open another terminal:
+
+```bash
+cd frontend
+npm install
+```
+
+---
+
+## ▶️ Run the Application
+
+### Start the Backend
+
+```bash
 cd backend
 npm start
+```
 
-If your project uses nodemon:
+If the project is configured with a development script:
 
+```bash
 npm run dev
-Start Frontend
+```
 
-In another terminal:
+### Start the Frontend
 
+Open another terminal:
+
+```bash
 cd frontend
 npm start
+```
 
-The application will be available at the local URL provided by your frontend development server.
+The application will be available at the local development URL provided by the frontend server.
 
-🧪 Testing
+---
 
-The backend APIs can be tested using Postman.
+## 🧪 Testing
+
+Backend APIs can be tested using **Postman**.
 
 Testing areas include:
 
-User authentication
-Meeting creation
-Meeting joining
-Real-time communication
-Chat functionality
-API error handling
-Invalid requests
-📊 Performance & Scalability
+* Authentication
+* Meeting creation
+* Meeting joining
+* Real-time communication
+* Chat functionality
+* API requests and responses
+* Error handling
+* Invalid requests
+
+---
+
+## 📊 Performance & Scalability
 
 VisionMeet is designed with real-time communication and scalability in mind.
 
-Performance Considerations
-WebRTC enables peer-to-peer media communication.
-Real-time events reduce communication delays.
-Stream API provides real-time messaging.
-Frontend and backend responsibilities are separated.
-The architecture can be extended to support larger meetings.
+### Performance Considerations
 
-Actual latency depends on network quality, geographical distance, device performance, and WebRTC connection conditions.
+* **WebRTC** enables peer-to-peer media communication.
+* Real-time communication reduces unnecessary request/response delays.
+* **Stream API** handles real-time messaging.
+* Frontend and backend responsibilities are separated.
+* The architecture can be extended to support larger meeting sessions.
 
-🔒 Security
+> Actual communication latency depends on network conditions, geographical distance, device performance, and WebRTC connection quality.
 
-Basic security practices include:
+---
 
-Environment variables for sensitive configuration
-API credentials kept outside source code
-Backend request validation
-HTTPS recommended for production
-Browser permissions for camera and microphone
+## 🔒 Security
 
-For production, additional authentication, authorization, rate limiting, and monitoring can be implemented.
+The project uses environment variables to keep sensitive API credentials outside the source code.
 
-☁️ Deployment
+For a production-ready implementation, additional security measures can include:
+
+* User authentication
+* Role-based authorization
+* Input validation
+* Rate limiting
+* Secure HTTP/HTTPS
+* API access control
+* Monitoring and logging
+
+---
+
+## ☁️ Deployment
 
 VisionMeet can be deployed using modern cloud platforms.
 
-Backend
+### Backend
 
-Possible platforms:
+Possible deployment platforms:
 
-Render
-Railway
-AWS
-Azure
-Google Cloud
-Frontend
+* Render
+* Railway
+* AWS
+* Azure
+* Google Cloud
 
-Possible platforms:
+### Frontend
 
-Vercel
-Netlify
-AWS
-Cloudflare Pages
+Possible deployment platforms:
 
-HTTPS is recommended for production WebRTC applications because browsers require secure contexts for camera and microphone access.
+* Vercel
+* Netlify
+* AWS
+* Cloudflare Pages
 
-🧠 What I Learned
+> HTTPS is recommended for production WebRTC applications because browsers require a secure context for camera and microphone access.
 
-Building VisionMeet gave me practical experience with:
+---
 
-Real-time application development
-WebRTC
-Peer-to-peer communication
-Real-time chat
-REST API development
-Node.js
-Express.js
-Stream API integration
-Asynchronous JavaScript
-Client-server communication
-Error handling
-Cloud deployment
-Git and GitHub
-🔮 Future Improvements
-🔐 User authentication and authorization
-🖥️ Screen sharing
-📝 Meeting recording
-📅 Meeting scheduling
-🔗 Shareable meeting links
-👤 User profiles
-🎨 Dark mode
-🔔 Meeting notifications
-📊 Meeting analytics
-🔊 Advanced audio controls
-👥 Larger meeting capacity
-📱 Improved mobile experience
+## 📸 Screenshots
+
+Add screenshots of the actual application here.
+
+```markdown
+## 📸 Screenshots
+
+### Video Meeting
+
+![Video Meeting](./screenshots/video-meeting.png)
+
+### Real-Time Chat
+
+![Real-Time Chat](./screenshots/chat.png)
+
+### Home Page
+
+![Home Page](./screenshots/home.png)
+```
+
+---
+
+## 🧠 What I Learned
+
+Building VisionMeet provided hands-on experience with:
+
+* Real-time web application development
+* WebRTC fundamentals
+* Peer-to-peer communication
+* Real-time video and audio streaming
+* Real-time chat implementation
+* Node.js and Express.js
+* REST API development
+* Stream API integration
+* Asynchronous JavaScript
+* Client-server communication
+* Error handling
+* Git and GitHub
+* Cloud deployment concepts
+
+---
+
+## 🔮 Future Improvements
+
+The following features could be added in future versions:
+
+* 🖥️ Screen sharing
+* 📝 Meeting recording
+* 📅 Meeting scheduling
+* 🔗 Shareable meeting links
+* 👤 User profiles
+* 🔐 Advanced authentication
+* 🔔 Meeting notifications
+* 📊 Meeting analytics
+* 🔊 Advanced audio controls
+* 👥 Larger meeting capacity
+* 📱 Improved mobile experience
+
+---
+
+
